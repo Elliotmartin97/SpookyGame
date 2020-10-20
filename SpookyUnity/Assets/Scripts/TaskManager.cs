@@ -12,6 +12,9 @@ public class TaskManager : MonoBehaviour
         public string className;
     }
 
+    //use class name sting like this maybe??
+   // System.Activator.CreateInstance(Type.GetType(namespace className));
+
     public List<Tasks> AvailableTasks;
     public List<Tasks> currentTasks;
     public List<Tasks> completedTasks;
@@ -32,6 +35,7 @@ public class TaskManager : MonoBehaviour
         newTask.complete = status;
         newTask.className = className;
         AvailableTasks.Add(newTask);
+
     }
 
     public void SelectTask()
@@ -58,5 +62,6 @@ public class TaskManager : MonoBehaviour
                 currentTasks.RemoveAt(i);
             }
         }
+       
     }
 }
